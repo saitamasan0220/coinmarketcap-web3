@@ -58,6 +58,36 @@ const Currencies = () => {
                             <p className={styles.tabItem}>LOG</p>
                         </div>
                     </div>
+                    <br />
+                    {/* <Graph /> */}
+                    <br />
+                    <div className={styles.flexBetweenCenter}>
+                        <div className="flex">
+                            <div className={styles.flexCenter}>
+                                <input type="checkbox" className="outline-none" /> &nbsp; USD
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div className={styles.flexCenter}>
+                                <input type='checkbox' /> &nbsp; BTC
+                            </div>
+                        </div>
+
+                        <p>
+                            Want more data?(' ')
+                            <span className="text-[#6188FF]">Check out our API</span>
+                        </p>
+                    </div>
+                    <br />
+                    <br />
+                    {/* <CMCpriceConverter
+                        from={coinName}
+                        fromSymbol={coinSymbol}
+                        fromLogo={solana}
+                        toLogo={<Usd />}
+                        price={price}
+                        to='United States Dollars'
+                        toSymbol='USD'
+                    /> */}
                 </div>
             </main>
         </div>
