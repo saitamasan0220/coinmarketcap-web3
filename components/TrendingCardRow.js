@@ -3,12 +3,24 @@ import Rate from './cmc-table/Rate'
 import Image from 'next/image'
 
 const styles = {
-    trendingCardRow: `flex items-center justify-between mb-4 text-[0.93rem]`
+    trendingCardRow: `flex items-center justify-between mb-4 text-[0.93rem]`,
+
 }
 
-const TrendingCardRow = () => {
+const TrendingCardRow = ({number, icon, name, symbol, isIncrement, rate}) => {
   return (
-    <div>TrendingCardRow</div>
+    <div className={styles.trendingCardRow}>
+        <p className="opacity-40">{number}</p>
+        <div className="w-full flex">
+            <div className="mx-5">
+                {icon && <Image src={icon} width={20} height={20}/>}
+            </div>
+            <p className="font-bold">
+                {name}
+                <span className="text-gray-400"></span>
+            </p>
+        </div>
+    </div>
   )
 }
 

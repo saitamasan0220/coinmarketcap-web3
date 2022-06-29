@@ -1,3 +1,4 @@
+import { BasePlatform } from 'chart.js'
 import {useState, useEffect, useContext, useCallback} from 'react'
 import btc from '../../assets/btc.png'
 import { CoinMarketContext } from '../../context/context'
@@ -7,6 +8,10 @@ const CMCTable = () => {
 
     let {getTopTenCoins} = useContext(CoinMarketContext)
     let [coinData, setCoinData] = useState(null)
+
+    useEffect(() => {
+        setData()
+    }, [])
 
     const setData = useCallback(async () => {
         try {
