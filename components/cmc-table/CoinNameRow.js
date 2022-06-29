@@ -1,8 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 
-const CoinNameRow = () => {
+const CoinNameRow = ({name, icon}) => {
   return (
-    <div>CoinNameRow</div>
+    <div >
+        <Image src={icon} alt={name} width={20} height={20} />
+        <p>{name}</p>
+    </div>
   )
 }
 
