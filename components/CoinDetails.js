@@ -247,6 +247,25 @@ const CoinDetails = () => {
                                     </div>
                                     <small>18,983,850.00 BTC</small>
                                 </div>
+                                <br />
+                                <div>
+                                    <div className={styles.flexBetween}>
+                                        <div>
+                                            <small className={styles.title}>Max Supply</small>
+                                        </div>
+                                        <div>
+                                            <small>21,000,000</small>
+                                        </div>
+                                    </div>
+                                    <div className={styles.flexBetween}>
+                                        <div>
+                                            <small className={styles.title}>Total Supply</small>
+                                        </div>
+                                        <div>
+                                            <small>18,983,912</small>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
