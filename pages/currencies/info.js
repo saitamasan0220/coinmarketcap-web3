@@ -73,7 +73,7 @@ const Currencies = () => {
                         </div>
 
                         <p>
-                            Want more data?(' ')
+                            Want more data?{' '}
                             <span className="text-[#6188FF]">Check out our API</span>
                         </p>
                     </div>
@@ -88,6 +88,10 @@ const Currencies = () => {
                         to='United States Dollars'
                         toSymbol='USD'
                     /> */}
+
+                    <div className="pt-10 ml-5">
+                        {/* <Chat /> */}
+                    </div>
                 </div>
             </main>
         </div>
