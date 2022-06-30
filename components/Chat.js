@@ -4,6 +4,7 @@ import ChevronUp from '../assets/svg/chevronUp'
 import shiba from '../assets/shiba.png'
 import Image from 'next/image'
 import Button from './Button'
+import ChatCard from './ChatCard'
 
 const styles = {
     bullishLabel: `flex cursor-pointer active:bg-green-600 items-center text text-green-600 border border-green-600 h-min px-2 rounded-lg`,
@@ -22,9 +23,9 @@ const styles = {
 
 const Chat = () => {
 
-    // const sendMessage = () => {
+    const sendMessage = () => {
 
-    // }
+    }
 
     const [message, setMessage] = useState('')
     const [bullishValue, setBullishValue] = useState(true)
@@ -101,7 +102,9 @@ const Chat = () => {
             <Button label='Post' onPress={sendMessage} />
         </div>
 
-        {/* <Chat /> */}
+        <ChatCard />
+        <ChatCard />
+        <ChatCard />
     </>
 
     

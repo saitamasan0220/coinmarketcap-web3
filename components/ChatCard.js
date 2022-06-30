@@ -4,6 +4,9 @@ import Heart from '../assets/svg/heart'
 import MoreHorizontal from '../assets/svg/moreHorizontal'
 import Share from '../assets/svg/share'
 import Image from 'next/image'
+import BearishFilled from './buttons/BearishFilled'
+import BullishFilled from './buttons/BullishFilled'
+import Shiba from '../assets/shiba.png'
 
 const styles = {
     postAction: `flex items-center`,
@@ -17,9 +20,50 @@ const styles = {
     labelsContainer: `flex w-full ml-3`
 }
 
-const ChatCard = () => {
+const ChatCard = ({content = '', timeStamp, sender, bullish, senderAvatar = '../assets/svg/moreHorizontal', likes, comments}) => {
   return (
-    <div>ChatCard</div>
+    <div className={styles.chatCard}>
+      <div className={styles.chatCardWrapper}>
+        <div className={styles.flexCenter}>
+          <div>
+            <Image 
+              width={40} 
+              height={40} 
+              // src={senderAvatar} 
+              src={'/../assets/shiba.png'}
+              className='rounded-full' alt='avatar' />
+          </div>
+          <div className={styles.labelsContainer}>
+            {sender}
+            &nbsp; • &nbsp;
+            <span className={styles.grey400}>{timeStamp}</span>
+            &nbsp; • &nbsp;
+            {bullish ? <BullishFilled/> : <BearishFilled/>}
+          </div>
+        </div>
+
+        <MoreHorizontal />
+      </div>
+
+      <p className={styles.messageContent}>{content}</p>
+
+      <div className={styles.flexBetween}>
+        <div className={styles.postAction}>
+          <Comment />
+          <p className={styles.greyText}>{comments}</p>
+        </div>
+
+        <div className={styles.postAction}>
+          <Heart />
+          <p className={styles.greyText}>{likes}</p>
+        </div>
+
+        <div className={styles.postAction}>
+          <Share />
+          <p className={styles.greyText}>Share</p>
+        </div>
+      </div>
+    </div>
   )
 }
 
