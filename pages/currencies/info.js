@@ -2,6 +2,7 @@ import Header from '../../components/Header'
 import solana from '../../assets/solana.png'
 import Usd from '../../assets/svg/usd'
 import { useEffect, useState } from 'react'
+import CMCpriceConverter from '../../components/CMCpriceConverter'
 
 const styles = {
     activeTab: `p-1 px-2 mr-2 rounded-lg bg-[#171924]`,
@@ -79,7 +80,7 @@ const Currencies = () => {
                     </div>
                     <br />
                     <br />
-                    {/* <CMCpriceConverter
+                    <CMCpriceConverter
                         from={coinName}
                         fromSymbol={coinSymbol}
                         fromLogo={solana}
@@ -87,7 +88,7 @@ const Currencies = () => {
                         price={price}
                         to='United States Dollars'
                         toSymbol='USD'
-                    /> */}
+                    />
 
                     <div className="pt-10 ml-5">
                         {/* <Chat /> */}

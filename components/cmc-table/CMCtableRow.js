@@ -4,7 +4,7 @@ import More from '../../assets/svg/more'
 import Star from '../../assets/svg/star'
 import Rate from './Rate'
 import { useRouter } from 'next/router'
-import CoinNameRow from './CoinNameRow'
+import CoinNameRow from '../CoinNameRow'
 
 const styles = {
     tableRow: `text-white border-b border-gray-800 text-[0.93rem]`,
