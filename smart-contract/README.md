@@ -13,3 +13,16 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+npx hardhat run scripts/deploy.js --network rinkeby
+Compiled 9 Solidity files successfully
+Dogecoin deployed to:  0xe87151A361b5F00CA4a97A72E8c400b30212aC9C
+LinkToken deployed to:  0xdd0A77d56f0efF62EDc5491263ECc9F75Fb88513
+DaiToken deployed to:  0xD4bEcfD3E87e4561cAd69ff84c77EA8c67cB5F62
+UsdcToken deployed to:  0xBcbaD275ACF729B5015748C089A252E4B19fA94e
+
+npx hardhat run scripts/deploy.js
+Dogecoin deployed to:  0x5FbDB2315678afecb367f032d93F642f64180aa3
+LinkToken deployed to:  0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+DaiToken deployed to:  0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+UsdcToken deployed to:  0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
