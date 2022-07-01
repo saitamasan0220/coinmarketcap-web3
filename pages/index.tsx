@@ -9,6 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className='min-h-screen'>
       <Header />
+      <SwapCryptoModal />
       <div className="mt-10" />
       <Trending />
       <div className="mt-20" />
