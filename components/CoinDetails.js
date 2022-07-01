@@ -12,6 +12,8 @@ import solana from '../assets/solana.png'
 import avalanche from '../assets/avalanche.png'
 import bnb from '../assets/bnb.png'
 import shiba from '../assets/shiba.png'
+import RateFilled from './buttons/RateFilled'
+import DropDownBtn from './buttons/DropDownBtn'
 
 const styles = {
     coinDetails: `min-h-screen text-white`,
@@ -26,10 +28,10 @@ const styles = {
     flexBetween: `flex justify-between`,
 }
 
-const CoinDetails = () => {
+const CoinDetails = ({coinName, coinSymbol, price}) => {
 
     const coinIcon = () => {
-        switch(from) {
+        switch(coinName) {
             case 'Bitcoin':
                 return (
                     <Image
@@ -180,7 +182,7 @@ const CoinDetails = () => {
                                 </p>
                                 <div className="flex my-3">
                                     <h1 className="text-4xl">${price}</h1>
-                                    {/* <RateFilled /> */}
+                                    <RateFilled />
                                 </div>
                                 <div className="flex items-start">
                                     <p className="text-gray-400">15.26 ETH</p>
@@ -195,10 +197,10 @@ const CoinDetails = () => {
                             </div>
                             
                             <div className="flex">
-                                {/* <DropdownBtn label = 'Buy' />
-                                <DropdownBtn label = 'Exchange' />
-                                <DropdownBtn label = 'Gaming' />
-                                <DropdownBtn label = 'Earn Crypto' /> */}
+                                <DropDownBtn label = 'Buy' />
+                                <DropDownBtn label = 'Exchange' />
+                                <DropDownBtn label = 'Gaming' />
+                                <DropDownBtn label = 'Earn Crypto' />
                             </div>
                         </div>
 
