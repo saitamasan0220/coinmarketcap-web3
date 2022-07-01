@@ -55,13 +55,61 @@ const SwapCryptoModal = () => {
                             onChange={e => setFromToken(e.target.value)}
                             value={fromToken}
                         >
-
+                            {coins.map(coin => {
+                                if(!loadingCoins) {
+                                    return(
+                                        <option key={coin.id} value={coin.attributes.name}>
+                                            {coin.attributes.name}
+                                        </option>
+                                    )
+                                }
+                            })}
+                            <option value='ETH'>ETH</option>
                         </select>
+                        <label htmlFor="fromToken" className="block mb-2 ml-2">
+                            To
+                        </label>
+                        <select 
+                            name="toToken" 
+                            className={styles.input}
+                            placeholder='Token to swap'
+                            onChange={e => setToToken(e.target.value)}
+                            value={toToken}
+                        >
+                            {coins.map(coin => {
+                                if(!loadingCoins) {
+                                    return(
+                                        <option key={coin.id} value={coin.attributes.name}>
+                                            {coin.attributes.name}
+                                        </option>
+                                    )
+                                }
+                            })}
+                        </select>
+                        <label htmlFor="amount" className="block mb-2 ml-2">
+                            Amount
+                        </label>
+                        <input
+                            name='amount'
+                            className={styles.input}
+                            placeholder='Token to swap'
+                            value={amount}
+                            onChange={e => setAmount(e.target.value)}
+                        />
+
+                        <button 
+                            className={styles.button}
+                            onClick={mint}
+                        >
+                            Swap!
+                        </button>
                     </div>
                 </div>
             </div>
         )
     }
+
+    return <></>
 }
 
 export default SwapCryptoModal

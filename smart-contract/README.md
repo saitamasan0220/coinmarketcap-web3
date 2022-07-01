@@ -26,3 +26,9 @@ Dogecoin deployed to:  0x5FbDB2315678afecb367f032d93F642f64180aa3
 LinkToken deployed to:  0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
 DaiToken deployed to:  0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
 UsdcToken deployed to:  0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+npx hardhat run scripts/deploy.js --network rinkeby
+Dogecoin deployed to:  0x031a1292108C385f471B53219adDB51a608c7758
+LinkToken deployed to:  0xFf6c499226D56851fBB538c7dD3eEDf2Afa02193
+DaiToken deployed to:  0x8C6dcD042A20d741e19b293205179f8D42342FE9
+UsdcToken deployed to:  0x4beA8f1A162bC0C6AE3Ebb4c4f74dD03c452489a

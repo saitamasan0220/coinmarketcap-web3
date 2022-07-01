@@ -116,6 +116,8 @@ export const CoinMarketProvider = ({children}) => {
             let toReceipt = await toMintTransaction.wait()
             console.log(fromReceipt)
             console.log(toReceipt)
+        } catch(error) {
+            console.error(error)
         }
     }
 
