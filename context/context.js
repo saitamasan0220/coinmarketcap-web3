@@ -28,7 +28,7 @@ export const CoinMarketProvider = ({children}) => {
     const [currentAccount, setCurrentAccount] = useState('')
     const [openBuyCryptoModal, setOpenBuyCryptoModal] = useState(false)
     const [fromToken, setFromToken] = useState('')
-    const [toToken, setToToken] = useState('')
+    const [toToken, setToToken] = useState('Dai')
     const [amount, setAmount] = useState('')
 
     useEffect(() => {
@@ -45,7 +45,7 @@ export const CoinMarketProvider = ({children}) => {
         if(fromToken === 'Usdc') return usdcAddress
     }
 
-    const toContractAddress = () => {
+    const getToAddress = () => {
         if(toToken === 'Dai') return daiAddress
         if(toToken === 'Dogecoin') return dogeAddress
         if(toToken === 'Link') return linkAddress
