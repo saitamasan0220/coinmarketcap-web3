@@ -26,7 +26,7 @@ export const CoinMarketProvider = ({children}) => {
     } = useMoralisQuery('Coins')
 
     const [currentAccount, setCurrentAccount] = useState('')
-    const [openBuyCryptoModal, setOpenbuyCryptoModal] = useState(false)
+    const [openBuyCryptoModal, setOpenBuyCryptoModal] = useState(false)
     const [fromToken, setFromToken] = useState('')
     const [toToken, setToToken] = useState('')
     const [amount, setAmount] = useState('')
@@ -147,14 +147,14 @@ export const CoinMarketProvider = ({children}) => {
     }
 
     const openModal = () => {
-        setOpenbuyCryptoModal(true)
+        setOpenBuyCryptoModal(true)
     }
     return (
         <CoinMarketContext.Provider
             value = {{ 
                 getTopTenCoins,
                 openBuyCryptoModal,
-                setOpenbuyCryptoModal,
+                setOpenBuyCryptoModal,
                 fromToken,
                 toToken,
                 setFromToken,
