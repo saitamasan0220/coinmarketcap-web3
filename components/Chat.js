@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
+import { GunContext } from '../context/gunContext'
 import ChevronDown from '../assets/svg/chevronDown'
 import ChevronUp from '../assets/svg/chevronUp'
 import shiba from '../assets/shiba.png'
 import Image from 'next/image'
 import Button from './Button'
 import ChatCard from './ChatCard'
+import {faker} from '@faker-js/faker'
 
 const styles = {
     bullishLabel: `flex cursor-pointer active:bg-green-600 items-center text text-green-600 border border-green-600 h-min px-2 rounded-lg`,
@@ -23,12 +25,49 @@ const styles = {
 
 const Chat = () => {
 
-    const sendMessage = () => {
-
-    }
-
     const [message, setMessage] = useState('')
     const [bullishValue, setBullishValue] = useState(true)
+
+    // const {gun, getMessages, state} = useContext(GunContext)
+
+    // useEffect(() => {
+    //     getMessages('GUN_REF_7')
+    // }, [])
+
+    // console.log(state.messages)
+    
+    const formattedMessagesArray = () => {
+        
+        const uniqueArray = state.messages.filter((value, index) => {
+            const _value = JSON.stringify(value)
+
+            return(
+                index ===
+                state.messages.findIndex(obj => {
+                    return JSON.stringify(obj) === _value
+                })
+            )
+        })
+        return uniqueArray
+    }
+
+    const sendMessage = () => {
+        if(message.trim() === '') return
+        const messagesRef = gun.get('GUN_REF_7')
+
+        const newMessage = {
+            sender: faker.name.findName(),
+            avatar: 'https://avatars.dicebear.com/api/big-ears/fake-profile-picture.svg',
+            content: message.trim(),
+            isBullish: bullishValue,
+            createdAt: Date().substring(4,11),
+            messageId: Date.now()
+        }
+
+        messagesRef.set(newMessage)
+        setMessage('')
+    }
+
   return (
     <>
         <div className={styles.chat}>
@@ -50,7 +89,7 @@ const Chat = () => {
                             />
                         </div>
                         <div className="text-left mr-10">
-                            <b>saitamasan</b>
+                            <b>sleeper-agent</b>
                             <p className="text-gray-400">@twitterhandle</p>
                         </div>
                     </div>
@@ -99,11 +138,26 @@ const Chat = () => {
         />
 
         <div className={styles.postButtonContainer}>
-            <Button label='Post' onPress={sendMessage} />
+            <Button 
+                label='Post' 
+                // onPress={sendMessage} 
+            />
         </div>
 
-        <ChatCard />
-        <ChatCard />
+        {/* format the message then insert chatCard for every message  */}
+        {/* {formattedMessagesArray().slice(0).reverse().map((message, index) => {
+            <ChatCard 
+                key={index}
+                sender={message.sender}
+                senderUsername={message.username}
+                senderAvatar={'https://avatars.dicebear.com/api/big-ears/fake-profile-picture.svg'}
+                bullish={message.isBullish}
+                timeStamp={message.createdAt}
+                content={message.content}
+                likes='2.7k'
+                comments='19k'
+            />
+        })} */}
         <ChatCard />
     </>
 

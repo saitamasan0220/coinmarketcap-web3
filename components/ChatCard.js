@@ -20,7 +20,7 @@ const styles = {
     labelsContainer: `flex w-full ml-3`
 }
 
-const ChatCard = ({content = '', timeStamp, sender, bullish, senderAvatar = '../assets/svg/moreHorizontal', likes, comments}) => {
+const ChatCard = ({content = '', timeStamp, sender, bullish, senderAvatar, likes, comments}) => {
   return (
     <div className={styles.chatCard}>
       <div className={styles.chatCardWrapper}>
