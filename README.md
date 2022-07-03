@@ -4,6 +4,8 @@ ntl env:set NEXT_PUBLIC_SERVER https://lriyhqpkwomb.usemoralis.com:2053/server
 ntl env:set NEXT_PUBLIC_APP_ID tXjcHNncoG6RYo42EQsxlMpGXHRTXVgW2CS4aYOt
 ```
 
+Hello wonderful person! :) Thanks for using GUN, please ask for help on http://chat.gun.eco if anything takes you longer than 5min to figure out!
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
